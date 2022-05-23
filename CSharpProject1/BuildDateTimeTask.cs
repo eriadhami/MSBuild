@@ -20,7 +20,7 @@ namespace CSharpProject1
             string json = JsonSerializer.Serialize(buildData);
 
             string dir = Directory.GetCurrentDirectory();
-            string file = Path.Combine(dir, "CUSTOMTASK.json");
+            string file = Path.Combine(dir, "BuildInfo.json");
             File.WriteAllText(file, json);
             return true;
         }
@@ -30,7 +30,7 @@ namespace CSharpProject1
             ProcessStartInfo startInfo = new ProcessStartInfo("git");
 
             startInfo.UseShellExecute = false;
-            startInfo.WorkingDirectory = "/Users/eriadhami/Projects/AkvelonTaskExample";
+            startInfo.WorkingDirectory = Directory.GetCurrentDirectory();
             startInfo.RedirectStandardInput = true;
             startInfo.RedirectStandardOutput = true;
             startInfo.Arguments = command;

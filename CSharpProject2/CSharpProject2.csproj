@@ -11,8 +11,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+
   <UsingTask TaskName="BuildDateTimeTask"
-    AssemblyFile = "/Users/eriadhami/Projects/AkvelonTaskExample/CSharpProject1/bin/Debug/net7.0/CSharpProject1.dll" />
+    AssemblyFile = "..\CSharpProject1\bin\Debug\net7.0\CSharpProject1.dll" />
 
   <Target Name="CustomTask" AfterTargets="Build">
       <BuildDateTimeTask />
